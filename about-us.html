@@ -47,34 +47,33 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="container">
-        <!-- Centers the content -->
-        <div class="nav-inner">
-          <!-- Activates Flexbox (space-between) -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      
+      <!-- FIX: Wrapped both image and text inside a clickable anchor tag -->
+      <a href="home.html" class="nav-brand">
+        <img src="WE STUDY OVERSEAS-logo.png" alt="We Study Overseas Logo">
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="#">MBBS Abroad</a></li>
+        <li><a href="#">Universities</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
 
-          <!-- Changed from "logo" to "nav-brand" to match your CSS -->
-          <div class="nav-brand">We Study <span>Overseas</span></div>
-
-          <ul class="nav-links">
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="about-us.html">About</a></li>
-            <li><a href="#">MBBS Abroad</a></li>
-            <li><a href="#">Universities</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-
-          <!-- Changed from "nav-right" to "nav-actions" to match your CSS -->
-          <div class="nav-actions">
-            <!-- Make sure you have a .btn-outline defined in your Global CSS! -->
-            <button class="btn btn-outline">Login</button>
-            <button class="btn btn-primary">APPLY NOW</button>
-          </div>
-        </div>
+      <div class="nav-actions">
+        <button class="btn btn-outline">Login</button>
+        <button class="btn btn-primary">APPLY NOW</button>
       </div>
-    </nav>
+      
+    </div>
+  </div>
+</nav>
 
     <!-- ================= SECTION 3: HERO ================= -->
     <section class="hero-section">
