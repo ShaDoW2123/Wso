@@ -2773,7 +2773,7 @@ ul {
 /* --- Premium Card Design --- */
 
 .feat-univ-card {
-  flex: 0 0 380px; 
+  flex: 0 0 460px; 
   scroll-snap-align: start; 
   background: #ffffff;
   border-radius: 24px;
