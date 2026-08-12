@@ -1,20 +1,21 @@
 /* ==========================================================================
-   1. GLOBAL DESIGN SYSTEM TICKETS (TIER 1)
+   0. MASTER DESIGN SYSTEM VARIABLES (2026 SPEC)
    ========================================================================== */
-
 :root {
-  --primary: #170644;
+  /* Core Brand Palette */
+  --primary: #101828;
+  /* Deep Indigo */
   --primary-rgb: 23, 6, 68;
-
-  --accent: #f80035;
+  --accent: #2CC0FF;
+  /* Hot Crimson  */
   --accent-rgb: 248, 0, 53;
-  --accent-hover: #d1002c;
-
-  --dark: #0d0326;
   --light: #f8f9fa;
-  --text-main: #494949;
-  --text-muted: #737373;
+  /* Off-White Canvas */
 
+  /* Typography Variables */
+  --text-main: #494949;
+  /* Charcoal for readability */
+  --text-muted: #737373;
   --font-head: "Lexend", sans-serif;
   --font-body: "Montserrat", sans-serif;
 }
@@ -29,7 +30,8 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.7;
-  font-weight: 600; /* <--- NEW RULE APPLIED */
+  font-weight: 600;
+  /* <--- NEW RULE APPLIED */
   color: var(--text-main);
   background-color: var(--light);
   -webkit-font-smoothing: antialiased;
@@ -266,7 +268,8 @@ p {
 .manifest-zone-one {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  gap: 64px; /* Perfectly bridged spatial gap */
+  gap: 64px;
+  /* Perfectly bridged spatial gap */
   align-items: center;
   margin-bottom: 100px;
 }
@@ -431,7 +434,8 @@ p {
 .manifest-sketch-card {
   background: #ffffff;
   border-radius: 20px;
-  padding: 36px 28px; /* Gave the typography 4px more breathing room */
+  padding: 36px 28px;
+  /* Gave the typography 4px more breathing room */
   border: 1px solid rgba(var(--primary-rgb), 0.07);
   /* Hero-Tech: Multi-layered ambient optical shadow */
   box-shadow:
@@ -446,7 +450,8 @@ p {
 
 .manifest-sketch-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(var(--accent-rgb), 0.3); /* Card rim catches a red hint */
+  border-color: rgba(var(--accent-rgb), 0.3);
+  /* Card rim catches a red hint */
   box-shadow:
     0 12px 20px -4px rgba(var(--primary-rgb), 0.06),
     0 24px 48px -12px rgba(var(--primary-rgb), 0.12);
@@ -474,7 +479,8 @@ p {
 }
 
 .manifest-sketch-card:hover .manifest-sketch-num::after {
-  background: var(--accent); /* Track ignites to solid red on hover */
+  background: var(--accent);
+  /* Track ignites to solid red on hover */
 }
 
 .manifest-sketch-card h3 {
@@ -499,12 +505,10 @@ p {
 
 .manifest-sketch-baseboard {
   /* Velvet Studio Lighting: Overhead softbox simulated via radial gradient */
-  background: radial-gradient(
-    120% 140% at 50% 0%,
-    #260b66 0%,
-    var(--primary) 60%,
-    #0a021f 100%
-  );
+  background: radial-gradient(120% 140% at 50% 0%,
+      #260b66 0%,
+      var(--primary) 60%,
+      #0a021f 100%);
   color: #ffffff;
   border-radius: 24px;
   padding: 56px 52px;
@@ -526,12 +530,10 @@ p {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(var(--accent-rgb), 0) 0%,
-    var(--accent) 50%,
-    rgba(var(--accent-rgb), 0) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(var(--accent-rgb), 0) 0%,
+      var(--accent) 50%,
+      rgba(var(--accent-rgb), 0) 100%);
 }
 
 .manifest-bb-tag {
@@ -650,20 +652,24 @@ p {
 
 .purpose-section {
   padding: 120px 0;
-  background-color: var(--light); /* Luminous canvas restoration */
+  background-color: var(--light);
+  /* Luminous canvas restoration */
 }
 
 .purpose-ledger {
   display: grid;
-  grid-template-columns: 1fr 64px 1fr; /* 64px dedicated strictly to the spine */
+  grid-template-columns: 1fr 64px 1fr;
+  /* 64px dedicated strictly to the spine */
   align-items: stretch;
 }
 
 .purpose-pillar {
   padding: 48px 56px;
   border-radius: 28px;
-  border: 1px solid transparent; /* Holds geometry steady during hover state */
-  background-color: transparent; /* Default: Open Air */
+  border: 1px solid transparent;
+  /* Holds geometry steady during hover state */
+  background-color: transparent;
+  /* Default: Open Air */
   display: flex;
   flex-direction: column;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -737,7 +743,8 @@ p {
   color: var(--text-muted);
   line-height: 1.65;
   margin-bottom: 0;
-  padding-left: 16px; /* Indents text flush with the H4 title */
+  padding-left: 16px;
+  /* Indents text flush with the H4 title */
 }
 
 /* --- THE OPTICAL CENTER SPINE --- */
@@ -752,12 +759,10 @@ p {
 .spine-thread {
   width: 1px;
   flex-grow: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(var(--primary-rgb), 0.05) 0%,
-    rgba(var(--primary-rgb), 0.18) 50%,
-    rgba(var(--primary-rgb), 0.05) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(var(--primary-rgb), 0.05) 0%,
+      rgba(var(--primary-rgb), 0.18) 50%,
+      rgba(var(--primary-rgb), 0.05) 100%);
 }
 
 .spine-node {
@@ -786,7 +791,8 @@ p {
 
   .purpose-pillar {
     padding: 36px 28px;
-    background-color: #ffffff; /* Mobile fallback: permanent soft cards */
+    background-color: #ffffff;
+    /* Mobile fallback: permanent soft cards */
     border: 1px solid rgba(var(--primary-rgb), 0.06);
   }
 
@@ -806,12 +812,10 @@ p {
     height: 1px;
     width: auto;
     flex-grow: 1;
-    background: linear-gradient(
-      90deg,
-      rgba(var(--primary-rgb), 0.05) 0%,
-      rgba(var(--primary-rgb), 0.18) 50%,
-      rgba(var(--primary-rgb), 0.05) 100%
-    );
+    background: linear-gradient(90deg,
+        rgba(var(--primary-rgb), 0.05) 0%,
+        rgba(var(--primary-rgb), 0.18) 50%,
+        rgba(var(--primary-rgb), 0.05) 100%);
   }
 
   .spine-node {
@@ -919,7 +923,8 @@ p {
 }
 
 .choose-anchor:hover {
-  transform: none; /* Solid anchor stays grounded */
+  transform: none;
+  /* Solid anchor stays grounded */
 }
 
 .choose-anchor h4 {
@@ -1098,10 +1103,12 @@ p {
   .choose-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .hub-layout {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+
   .hub-container {
     padding: 48px 32px;
   }
@@ -1111,6 +1118,7 @@ p {
   .choose-grid {
     grid-template-columns: 1fr;
   }
+
   .choose-card {
     padding: 28px 24px;
   }
@@ -1204,7 +1212,8 @@ p {
   border: 1px solid rgba(var(--primary-rgb), 0.1);
   box-shadow: 0 25px 50px -12px rgba(var(--primary-rgb), 0.06);
   padding: 56px;
-  display: none; /* Controlled strictly by JavaScript */
+  display: none;
+  /* Controlled strictly by JavaScript */
   animation: dossierFadeIn 0.35s ease;
 }
 
@@ -1217,6 +1226,7 @@ p {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1344,10 +1354,12 @@ p {
   .track-panel {
     padding: 40px 32px;
   }
+
   .track-panel-top {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .track-matrix-grid {
     grid-template-columns: 1fr;
   }
@@ -1405,7 +1417,8 @@ p {
   grid-template-columns: repeat(2, 1fr);
   gap: 36px;
   align-items: stretch;
-  margin-top: 24px; /* Room for the floating badge */
+  margin-top: 24px;
+  /* Room for the floating badge */
 }
 
 .compare-card {
@@ -1428,7 +1441,8 @@ p {
   border: 2px solid var(--primary);
   box-shadow:
     0 25px 50px -12px rgba(var(--primary-rgb), 0.14),
-    0 0 0 4px rgba(var(--primary-rgb), 0.04); /* Soft outer halo */
+    0 0 0 4px rgba(var(--primary-rgb), 0.04);
+  /* Soft outer halo */
 }
 
 /* The Plane-Breaker Pill */
@@ -1479,6 +1493,7 @@ p {
   background: #fee2e2;
   color: #991b1b;
 }
+
 .compare-badge-good {
   background: rgba(var(--primary-rgb), 0.1);
   color: var(--primary);
@@ -1526,6 +1541,7 @@ p {
   background: #fee2e2;
   color: #ef4444;
 }
+
 .compare-icon-good {
   background: #d1fae5;
   color: #059669;
@@ -1558,7 +1574,8 @@ p {
 @media (max-width: 900px) {
   .compare-grid {
     grid-template-columns: 1fr;
-    gap: 48px; /* Extra gap so card 1 doesn't hit card 2's floating tag */
+    gap: 48px;
+    /* Extra gap so card 1 doesn't hit card 2's floating tag */
   }
 
   .compare-card {
@@ -1624,16 +1641,15 @@ p {
 .roadmap-grid::before {
   content: "";
   position: absolute;
-  top: 64px; /* Perfectly pierces the dead-center of the 48px nodes */
+  top: 64px;
+  /* Perfectly pierces the dead-center of the 48px nodes */
   left: 8%;
   right: 8%;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    rgba(var(--primary-rgb), 0.15) 0%,
-    var(--primary) 60%,
-    var(--accent) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(var(--primary-rgb), 0.15) 0%,
+      var(--primary) 60%,
+      var(--accent) 100%);
   z-index: 1;
 }
 
@@ -1642,7 +1658,8 @@ p {
   border-radius: 24px;
   padding: 40px 32px;
   position: relative;
-  z-index: 2; /* Forces card to sit ON TOP of the vector line */
+  z-index: 2;
+  /* Forces card to sit ON TOP of the vector line */
   border: 1px solid rgba(var(--primary-rgb), 0.06);
   box-shadow: 0 12px 32px rgba(var(--primary-rgb), 0.03);
   display: flex;
@@ -1761,7 +1778,8 @@ p {
   .roadmap-grid::before {
     top: 24px;
     bottom: 24px;
-    left: 52px; /* Pierces exact dead-center of stacked circles on mobile */
+    left: 52px;
+    /* Pierces exact dead-center of stacked circles on mobile */
     right: auto;
     width: 2px;
     height: auto;
@@ -1878,6 +1896,7 @@ p {
 .col-span-2 {
   grid-column: span 2;
 }
+
 .col-span-3 {
   grid-column: span 3;
 }
@@ -1923,7 +1942,7 @@ p {
   letter-spacing: -0.02em;
 }
 
-.framework-card > p {
+.framework-card>p {
   font-size: 0.94rem;
   color: var(--text-muted);
   line-height: 1.6;
@@ -1936,7 +1955,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: auto; /* Anchors list to bottom of card */
+  margin-top: auto;
+  /* Anchors list to bottom of card */
   padding-top: 20px;
   border-top: 1px dashed rgba(0, 0, 0, 0.08);
 }
@@ -1983,7 +2003,8 @@ p {
 /* Slot 5 Exception: The ROI Card */
 .card-roi {
   background: #fafbfc;
-  border-top: 3px solid var(--accent); /* Visual tie-back to Crimson standards */
+  border-top: 3px solid var(--accent);
+  /* Visual tie-back to Crimson standards */
 }
 
 .roi-index {
@@ -2031,6 +2052,7 @@ p {
   .framework-grid {
     grid-template-columns: 1fr;
   }
+
   .col-span-2,
   .col-span-3 {
     grid-column: span 1;
@@ -2142,6 +2164,7 @@ p {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2177,6 +2200,7 @@ p {
 .matchup-card.side-a {
   border-left: 4px solid #2563eb;
 }
+
 .matchup-card.side-b {
   border-left: 4px solid var(--accent);
 }
@@ -2203,6 +2227,7 @@ p {
   background: #eff6ff;
   color: #2563eb;
 }
+
 .badge-side-b {
   background: rgba(var(--accent-rgb), 0.08);
   color: var(--accent);
@@ -2308,9 +2333,11 @@ p {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .matchup-card {
     padding: 32px 26px;
   }
+
   .matchup-divider {
     height: 36px;
     margin: -10px 0;
@@ -2356,13 +2383,11 @@ p {
   left: 50%;
   width: 2px;
   transform: translateX(-50%);
-  background: linear-gradient(
-    180deg,
-    rgba(var(--primary-rgb), 0.1) 0%,
-    var(--primary) 15%,
-    var(--primary) 85%,
-    var(--accent) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(var(--primary-rgb), 0.1) 0%,
+      var(--primary) 15%,
+      var(--primary) 85%,
+      var(--accent) 100%);
 }
 
 .journey-step {
@@ -2488,6 +2513,7 @@ p {
    ========================================================================== */
 
 @media (max-width: 860px) {
+
   /* 1. Yank the center line over to the left edge */
   .journey-track::before {
     left: 20px;
@@ -2498,7 +2524,8 @@ p {
   .journey-step {
     width: 100%;
     left: 0;
-    padding-left: 56px; /* Air gap for the left line + circle */
+    padding-left: 56px;
+    /* Air gap for the left line + circle */
     padding-right: 0;
   }
 
@@ -2522,7 +2549,8 @@ p {
    ========================================================================== */
 
 .finance-section {
-  padding: 112px 0 64px 0; /* Tightened bottom padding to flow into Visa Sec */
+  padding: 112px 0 64px 0;
+  /* Tightened bottom padding to flow into Visa Sec */
   background-color: var(--light);
 }
 
@@ -2671,6 +2699,7 @@ p {
 .visa-mono-head h2 {
   color: #ffffff;
 }
+
 .visa-lead {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -2990,9 +3019,11 @@ p {
 .border-georgia {
   border-left: 4px solid #ef4444;
 }
+
 .border-russia {
   border-left: 4px solid #3b82f6;
 }
+
 .border-kazakh {
   border-left: 4px solid #f59e0b;
 }
@@ -3130,15 +3161,18 @@ p {
 /* --- Responsive Breakpoints --- */
 
 @media (max-width: 1024px) {
+
   .nmc-advisory-board,
   .thesis-banner {
     padding: 48px 32px;
   }
+
   .nmc-matrix,
   .entity-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .outcomes-grid {
     grid-template-columns: 1fr;
   }
@@ -3279,7 +3313,7 @@ p {
   flex-shrink: 0;
 }
 
-.faq-sum > span:nth-child(2) {
+.faq-sum>span:nth-child(2) {
   font-family: var(--font-head);
   font-size: 1.02rem;
   font-weight: 600;
@@ -3312,6 +3346,7 @@ p {
   width: 14px;
   height: 2px;
 }
+
 .faq-cross::after {
   top: 0;
   left: 6px;
@@ -3321,16 +3356,19 @@ p {
 
 .faq-item[open] .faq-cross::after {
   transform: rotate(90deg);
-  opacity: 0; /* Plus horizontal arm dissolves into Minus */
+  opacity: 0;
+  /* Plus horizontal arm dissolves into Minus */
 }
 
 .faq-item[open] .faq-cross::before {
-  background-color: var(--accent); /* Minus ignites to Crimson */
+  background-color: var(--accent);
+  /* Minus ignites to Crimson */
 }
 
 /* Answer Drawer */
 .faq-ans {
-  padding: 0 24px 24px 64px; /* Flushes body text perfectly under the question text */
+  padding: 0 24px 24px 64px;
+  /* Flushes body text perfectly under the question text */
   border-top: 1px solid transparent;
 }
 
@@ -3362,12 +3400,14 @@ p {
 
 @media (max-width: 960px) {
   .faq-grid {
-    grid-template-columns: 1fr; /* Collapses into 1 single scroll column on mobile */
+    grid-template-columns: 1fr;
+    /* Collapses into 1 single scroll column on mobile */
   }
 
   .faq-ans {
     padding: 0 20px 20px 20px;
   }
+
   .faq-sum {
     padding: 18px 20px;
   }
@@ -3379,7 +3419,8 @@ p {
 
 .anthem-section {
   padding: 120px 0 140px 0;
-  background-color: var(--light); /* Restores the breath of the canvas */
+  background-color: var(--light);
+  /* Restores the breath of the canvas */
 }
 
 .anthem-canvas {
@@ -3395,13 +3436,15 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: var(--accent); /* #f80035 */
+  color: var(--accent);
+  /* #f80035 */
   margin-bottom: 24px;
 }
 
 .anthem-title {
   font-size: clamp(2.8rem, 5.5vw, 4.2rem);
-  color: var(--primary); /* #170644 */
+  color: var(--primary);
+  /* #170644 */
   letter-spacing: -0.035em;
   line-height: 1.12;
   margin-bottom: 40px;
@@ -3424,11 +3467,9 @@ p {
 
 .anthem-lead strong {
   font-weight: 700;
-  background: linear-gradient(
-    180deg,
-    transparent 65%,
-    rgba(248, 0, 53, 0.12) 65%
-  );
+  background: linear-gradient(180deg,
+      transparent 65%,
+      rgba(248, 0, 53, 0.12) 65%);
 }
 
 .anthem-prose p:last-child {
